@@ -59,7 +59,7 @@ function setTime(value) {
 function finishGame() {
 	timeEl.parentNode.classList.add('hide')
 	board.innerHTML = `
-		<h1>Cчет: <span class="primary">${score}</span></h1>
+		<h1>Score: <span class="primary">${score}</span></h1>
 	`
 	startAgain()
 
@@ -68,7 +68,7 @@ function finishGame() {
 function startAgain() {
 	const returnButton = document.createElement('button')
 	returnButton.classList.add('return')
-	returnButton.textContent = 'В начало'
+	returnButton.textContent = 'Start again'
 	board.after(returnButton)
 	returnButton.addEventListener('click', (event) => {
 		event.preventDefault()
